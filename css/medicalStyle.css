@@ -1,0 +1,140 @@
+.container {
+  width: 800px;
+  margin: 20px auto;
+}
+.doctor {
+  width: 500px;
+  position: relative;
+}
+/* .doctor::after{
+  content: "Read this -";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+} */
+.ques-box {
+  width: 350px;
+  height: 180px;
+  background-color: #efdcd6;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  top: -80px;
+  left: 150px;
+  box-shadow: 6px 2px #4d88df;
+}
+.ques-box h3 {
+  color: #30808a;
+  width: 100%;
+}
+.tem-num {
+  width: 100%;
+  height: 40px;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.ques-box svg {
+  fill: white;
+  position: absolute;
+  top: calc(100% - 10%);
+  padding-top: 10px;
+  margin-top: 5px;
+  right: 5px;
+  background-color: #30808a;
+  border-radius: 10px;
+  z-index: 0;
+  mix-blend-mode: overlay;
+  /* width: 40px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.smell-box {
+  display: none;
+}
+.taste-box {
+  display: none;
+}
+.chx-cont {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20%;
+}
+.checky {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-right: 10px;
+  margin-left: 20px;
+  background-color: white;
+  border: 10px solid white;
+  outline: none;
+  border-radius: 5px;
+}
+.chx-cont label {
+  font-weight: 900;
+  color: #30808a;
+  font-size: 20px;
+}
+.answers h3 {
+  color: #30808a;
+  width: 100%;
+}
+.answers {
+  width: 350px;
+  height: 180px;
+  background-color: #efdcd6;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  top: -80px;
+  left: 120px;
+  box-shadow: 6px 2px #4d88df;
+}
+.answers li {
+  padding: 5px;
+  color: #0066ff;
+  width: 100%;
+  background-color: #e1d1cb;
+}
+.answers li:not(:last-child) {
+  border-bottom: 2px solid white;
+}
+.anses {
+  /* display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center; */
+  /* display: grid; */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  display: none;
+  margin-bottom: 28px;
+}
+@media (max-width: 798px){
+  .anses {
+    grid-template-columns: repeat(1, 250px);
+    gap: 20px;
+  }
+  .doctor {
+    width:300px;
+  }
+  .answers{
+    left: 0;
+  }
+  .ques-box{
+    left: 0;
+  }
+  .container{
+    width: 350px;
+    margin-left: 0 !important;
+  }
+}

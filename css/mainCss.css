@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(to bottom, #efdcd6, #7cadd1);
+  min-height: 96.87vh;
+}
+* {
+  box-sizing: border-box;
+}
+.over {
+  position: fixed; /* Sit on top of the page content */
+  /*display: none;*/ /* Hidden by default */
+  display: none;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 200; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  transition: 0.5s;
+}
+.reminder {
+  display: none;
+  position: fixed;
+  width: 300px;
+  height: 250px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 201;
+  transition: 0.5s;
+}
+.reminder img {
+  width: 200px;
+  height: 200px;
+  transition: 0.5s;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+:root {
+  --mainColor: #30808a;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+.tit-cont span {
+  color: rgb(209, 209, 209);
+}
+.tit-cont {
+  position: relative;
+  /* width: 100%; */
+  margin: 20px auto;
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px !important;
+  padding: 0 20px;
+  top: 0;
+  border-radius: 100px;
+  width: 800px;
+}
+.tit-cont img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  position: absolute;
+  right: 120px;
+}
+h3 {
+  font-weight: 900;
+  color: white;
+}
+h2 {
+  font-weight: 900;
+  color: #504b5e;
+}
+h4 {
+  font-weight: 700;
+}
+.nav-bar {
+  background-color: var(--mainColor);
+  height: 100vh;
+  position: fixed;
+  margin-right: 100px;
+  left: 0;
+  transition: 0.4s ease-in-out;
+  top: 0;
+  width: 220px;
+  padding: 15px 10px;
+  z-index: 100;
+}
+.nav-bar * {
+  transition: 0.4s ease-in-out;
+}
+.nav-bar img {
+  width: 70px;
+  height: 50px;
+}
+.cov {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: -50px;
+}
+.nav-bar .nav-head {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: white;
+}
+.main-taps {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.main-taps svg {
+  fill: white;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.main-taps h3 {
+  cursor: pointer;
+}
+.main-taps a {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.main-taps h3:hover {
+  transform: translateX(10px);
+}
+.nav-bar .arrow {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainColor);
+  cursor: pointer;
+  border-radius: 50%;
+  transform: rotate(180deg) translate(-30%);
+  top: 50%;
+}
+.nav-bar.active .arrow {
+  transform: rotate(0deg) translate(50%);
+}
+.nav-bar.active {
+  height: 80vh;
+  position: fixed;
+  border-radius: 500px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 10vh;
+  left: -130px;
+}
+.nav-bar.active .cov {
+  display: none;
+}
+.nav-bar.active .main-taps {
+  margin-top: 0;
+}
+.nav-bar.active .main-taps > * h3 {
+  display: none;
+}
+.nav-bar a {
+  color: white;
+}
+.nav-bar.active .main-taps svg {
+  margin: 0 0 20px 130px;
+}
+@media (max-width: 798px) {
+  .tit-cont {
+    display: none;
+  }
+  .container {
+    margin-left: auto !important;
+    margin-top: 100px;
+  }
+  .nav-bar {
+    top: 0 !important;
+    left: 50% !important;
+    width: 600px !important;
+    height: 100px !important;
+    max-width: 100%;
+    min-width: 320px;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 50px;
+      box-shadow: -1px -1px 11px 0px black;
+  }
+  .main-taps {
+    margin-top: 50px !important;
+    flex-direction: row !important;
+  }
+  .main-taps > * {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-taps > * svg {
+    margin: 0 !important;
+  }
+  .nav-bar .arrow {
+    display: none;
+  }
+}
